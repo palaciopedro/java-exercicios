@@ -34,7 +34,6 @@ public class Program {
 			account = new Account(number, holder);
 		}
 		
-		
 		System.out.println();
 		System.out.println("Account data:");
 		System.out.println(account);
