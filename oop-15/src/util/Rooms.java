@@ -26,4 +26,7 @@ public class Rooms {
 		this.email = email;
 	}
 	
+	public String toString() {
+		return name + ", " + email;
+	}
 }

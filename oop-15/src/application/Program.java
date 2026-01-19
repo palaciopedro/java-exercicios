@@ -34,7 +34,7 @@ public class Program {
 		
 		for (int i = 0; i < vect.length; i++) {
 			if (vect[i] != null) {
-				System.out.printf("%d: %s, %s%n", i, vect[i].getName(), vect[i].getEmail());
+				System.out.printf("%d: %s%n", i, vect[i]);
 			}
 		}
 			
