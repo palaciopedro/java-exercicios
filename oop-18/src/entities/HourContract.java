@@ -4,19 +4,19 @@ import java.time.LocalDate;
 
 public class HourContract {
 
-	public LocalDate date;
-	public Double valuePerHour;
-	public Integer hours;
+	private LocalDate date;
+	private	Double valuePerhour;
+	private Integer hours;
 	
 	public HourContract() {
 	}
-	
-	public HourContract(LocalDate date, Double valuePerHour, Integer hours) {
+
+	public HourContract(LocalDate date, Double valuePerhour, Integer hours) {
 		this.date = date;
-		this.valuePerHour = valuePerHour;
+		this.valuePerhour = valuePerhour;
 		this.hours = hours;
 	}
-	
+
 	public LocalDate getDate() {
 		return date;
 	}
@@ -25,12 +25,12 @@ public class HourContract {
 		this.date = date;
 	}
 
-	public Double getValuePerHour() {
-		return valuePerHour;
+	public Double getValuePerhour() {
+		return valuePerhour;
 	}
 
-	public void setValuePerHour(Double valuePerHour) {
-		this.valuePerHour = valuePerHour;
+	public void setValuePerhour(Double valuePerhour) {
+		this.valuePerhour = valuePerhour;
 	}
 
 	public Integer getHours() {
@@ -40,8 +40,8 @@ public class HourContract {
 	public void setHours(Integer hours) {
 		this.hours = hours;
 	}
-
+	
 	public Double totalValue() {
-		return valuePerHour * hours;
+		return valuePerhour * hours;
 	}
 }

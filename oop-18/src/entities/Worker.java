@@ -15,16 +15,15 @@ public class Worker {
 	private List<HourContract> contracts = new ArrayList<>();
 	
 	public Worker() {
-		
 	}
-	
+
 	public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
 		this.name = name;
 		this.level = level;
 		this.baseSalary = baseSalary;
 		this.department = department;
 	}
-
+	
 	public String getName() {
 		return name;
 	}
@@ -48,7 +47,7 @@ public class Worker {
 	public void setBaseSalary(Double baseSalary) {
 		this.baseSalary = baseSalary;
 	}
-	
+
 	public Department getDepartment() {
 		return department;
 	}
@@ -56,11 +55,11 @@ public class Worker {
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
-	
-	public List<HourContract> getContracts(){
+
+	public List<HourContract> getContracts() {
 		return contracts;
 	}
-	
+
 	public void addContract(HourContract contract) {
 		contracts.add(contract);
 	}
@@ -72,11 +71,10 @@ public class Worker {
 	public double income(int year, int month) {
 		double sum = baseSalary;
 		for (HourContract c : contracts) {
-			if (c.getDate().getMonthValue() == month && c.getDate().getYear() == year) {
+			if (c.getDate().getYear() == year && c.getDate().getMonthValue() == month) {
 				sum += c.totalValue();
 			}
 		}
 		return sum;
-		
 	}
 }
